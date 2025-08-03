@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 
 class PlayersRequest(BaseModel):
     players: List[str]

@@ -1,8 +1,5 @@
-from fastapi import HTTPException
 from models import ScheduleResponse, MatchResponse, TiesResponse
-from pydantic import BaseModel, EmailStr
-from datetime import datetime
-from typing import List, Tuple
+from typing import List
 import math
 
 def generate_league_round_robin_schedule(players: List[str]) -> ScheduleResponse:
@@ -18,4 +15,5 @@ def generate_league_round_robin_schedule(players: List[str]) -> ScheduleResponse
 def generate_possible_ties(players: List[str]) -> TiesResponse:
     players_count = len(players)
     total_wins_possible = math.comb(players_count, 2)
+    # WIP
     
